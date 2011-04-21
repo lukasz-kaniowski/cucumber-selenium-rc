@@ -14,7 +14,7 @@ end
 init_browser
 
 at_exit do
-  $browser.stop
+#  $browser.stop
 end
 
 #step definitions
@@ -29,5 +29,13 @@ When /^I press "([^\"]*)"$/ do |arg1|
 end
 
 Then /^I should see "([^\"]*)"$/ do |text|
-  ($browser.text?text).should == true
+  ($browser.text? text).should == true
+end
+
+When /^I submit$/ do
+  $browser.click "//button[@type='submit']"
+end
+
+When /^I fill "([^\"]*)" with "([^\"]*)"$/ do |field, value|
+  $browser.type field, value
 end
