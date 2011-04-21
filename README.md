@@ -1,5 +1,8 @@
 # Sandbox application using cucumber ant selenium rc
 
+Webapp is a showoff application from spring. It is build on spring-mvc 3.
+Testing is done via cucumber and selenium rc.
+
 ## Installing
 
 To run this example you will need ruby installed.
