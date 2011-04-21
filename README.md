@@ -24,9 +24,11 @@ start selenium rc
 start tomcat
 
 > cd mvc-webapp
+>
 > mvn tomcat:run
 
 run tests
 
 > cd tests
+>
 > cucumber
