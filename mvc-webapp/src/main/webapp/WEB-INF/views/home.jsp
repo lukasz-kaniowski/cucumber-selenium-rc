@@ -64,6 +64,9 @@
 		<li><a href="#user">User</a></li>
     </ul>
     <div id="user">
+        <li><a href="#add">add</a></li>
+    </div>
+    <div>
 
     </div>
     <div id="simple">
