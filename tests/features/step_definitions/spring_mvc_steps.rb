@@ -2,8 +2,9 @@ require "selenium/client"
 require "rspec/expectations"
 
 def init_browser
+  host = "localhost"
   $browser = Selenium::Client::Driver.new \
-          :host => "localhost",
+          :host => host,
           :port => 4444,
           :browser => "*firefox",
           :url => "http://localhost:8080",
