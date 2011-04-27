@@ -18,7 +18,7 @@
 
 
         </fieldset>
-
+        <p><button type="submit">Submit</button></p>
 
     </form:form>
     <script type="text/javascript">
