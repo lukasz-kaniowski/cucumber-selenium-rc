@@ -61,7 +61,11 @@
 		<li><a href="<c:url value="/form" />">Forms</a></li>
 		<li><a href="<c:url value="/fileupload" />">File Upload</a></li>
 		<li><a href="#exceptions">Exception Handling</a></li>
+		<li><a href="#user">User</a></li>
     </ul>
+    <div id="user">
+
+    </div>
     <div id="simple">
 		<h2>Simple</h2>
 		<p>
