@@ -15,7 +15,7 @@ end
 init_browser
 
 at_exit do
-#  $browser.stop
+  $browser.stop
 end
 
 #step definitions
