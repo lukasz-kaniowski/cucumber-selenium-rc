@@ -19,6 +19,8 @@ import javax.validation.Valid;
 @RequestMapping("/user")
 public class UserController {
 
+    private UserService userService;
+
     @RequestMapping(method = RequestMethod.GET, value = "/add")
     public void form(@RequestHeader(value = "X-Requested-With", required = false) String requestedWith, HttpSession session, Model model) {
         model.addAttribute(new User());
@@ -30,6 +32,15 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.POST)
     public String processSubmit(@RequestHeader(value = "X-Requested-With", required = false) String requestedWith, @Valid User user, BindingResult result, HttpSession session, Model model) {
+        try {
+            userService.save(user);
+        } catch (Exception e) {
+            return "redirect:/error";
+        }
         return "redirect:/user";
+    }
+
+    public void setUserService(UserService userService) {
+        this.userService = userService;
     }
 }
