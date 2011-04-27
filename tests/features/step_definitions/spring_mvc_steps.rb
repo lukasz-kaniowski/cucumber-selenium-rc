@@ -23,10 +23,12 @@ end
 Given /^I am on the "([^\"]*)" page$/ do |page|
   $browser.open "/mvc-webapp"
   $browser.click "link=#{page}"
+  sleep 0.3
 end
 
 When /^I press "([^\"]*)"$/ do |arg1|
   $browser.click "link=#{arg1}"
+  sleep 0.3
 end
 
 Then /^I should see "([^\"]*)"$/ do |text|
