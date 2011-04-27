@@ -37,6 +37,7 @@ end
 
 When /^I submit$/ do
   $browser.click "//button[@type='submit']"
+  sleep 0.3
 end
 
 When /^I fill "([^\"]*)" with "([^\"]*)"$/ do |field, value|
