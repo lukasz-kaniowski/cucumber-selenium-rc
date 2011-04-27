@@ -9,4 +9,5 @@ Feature: Users
     And I fill "name" with "extra user"
     And I submit
     Then I should see notification "User created!"
+    And I should see "User list"
     And I should see "extra user"
