@@ -1,5 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html>
 <head>
 	<title>mvc-showcase</title>
@@ -61,14 +62,12 @@
 		<li><a href="<c:url value="/form" />">Forms</a></li>
 		<li><a href="<c:url value="/fileupload" />">File Upload</a></li>
 		<li><a href="#exceptions">Exception Handling</a></li>
-		<li><a href="#user">User</a></li>
-    </ul>
-    <div id="user">
-        <li><a href="#add">add</a></li>
-    </div>
-    <div>
+		<li><a href="<c:url value="/user"/>">User</a></li>
 
-    </div>
+    </ul>
+
+
+
     <div id="simple">
 		<h2>Simple</h2>
 		<p>
