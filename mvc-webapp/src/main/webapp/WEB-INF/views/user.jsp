@@ -6,5 +6,9 @@
 	<div id="user">
 		<h2>User list</h2>
         <li><a href="<c:url value="/user/add"/>">add</a></li>
-
+        <c:forEach var="user" items="${userList}">
+            <div>
+                User with name: ${user.name}
+            </div>
+        </c:forEach>
 	</div>

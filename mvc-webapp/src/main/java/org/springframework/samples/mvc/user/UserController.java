@@ -1,5 +1,6 @@
 package org.springframework.samples.mvc.user;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.mvc.AjaxUtils;
 import org.springframework.samples.mvc.flash.FlashMap;
 import org.springframework.samples.mvc.flash.FlashMap.Message;
@@ -18,7 +19,7 @@ import javax.validation.Valid;
 @Controller
 @RequestMapping("/user")
 public class UserController {
-
+    @Autowired
     private UserService userService;
 
     @RequestMapping(method = RequestMethod.GET, value = "/add")
@@ -28,6 +29,7 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.GET)
     public void list(@RequestHeader(value = "X-Requested-With", required = false) String requestedWith, HttpSession session, Model model) {
+        model.addAttribute("userList", userService.list());
     }
 
     @RequestMapping(method = RequestMethod.POST)
