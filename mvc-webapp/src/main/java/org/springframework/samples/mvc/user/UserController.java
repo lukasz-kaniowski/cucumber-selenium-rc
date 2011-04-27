@@ -24,9 +24,12 @@ public class UserController {
         model.addAttribute(new User());
     }
 
-    @RequestMapping(method = RequestMethod.GET )
+    @RequestMapping(method = RequestMethod.GET)
     public void list(@RequestHeader(value = "X-Requested-With", required = false) String requestedWith, HttpSession session, Model model) {
     }
 
-
+    @RequestMapping(method = RequestMethod.POST)
+    public String processSubmit(@RequestHeader(value = "X-Requested-With", required = false) String requestedWith, @Valid User user, BindingResult result, HttpSession session, Model model) {
+        return "redirect:/user";
+    }
 }

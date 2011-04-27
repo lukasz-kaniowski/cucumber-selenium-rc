@@ -4,7 +4,7 @@
 <%@ page session="false" %>
 
 	<div id="user">
-		<h2>User</h2>
+		<h2>User list</h2>
         <li><a href="<c:url value="/user/add"/>">add</a></li>
 
 	</div>
